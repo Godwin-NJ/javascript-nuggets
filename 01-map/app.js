@@ -1,24 +1,24 @@
 // MAP Method
 const people = [
   {
-    name: 'bob',
+    name: "bob",
     age: 20,
-    position: 'developer',
+    position: "developer",
   },
   {
-    name: 'anna',
+    name: "anna",
     age: 25,
-    position: 'designer',
+    position: "designer",
   },
   {
-    name: 'susy',
+    name: "susy",
     age: 30,
-    position: 'the boss',
+    position: "the boss",
   },
   {
-    name: 'john',
+    name: "john",
     age: 26,
-    position: 'intern',
+    position: "intern",
   },
 ];
 // Quokka.js - Extension
@@ -26,20 +26,13 @@ const people = [
 // does not change the size of original array (unlike filter)
 // uses values from original array when making new one
 
-const getAges = (person) => person.age * 2;
-
-const ages = people.map(getAges);
-console.log(ages);
-
-const newPeople = people.map((item) => {
-  return {
-    firsName: item.name.toUpperCase(),
-    oldAge: item.age + 20,
-  };
+const view = people.map((person) => {
+  // return `${person.age}`;
+  return `<h2>${person.position}</h2>`;
 });
-console.log(newPeople);
+// console.log(view);
 
-const names = people.map((person) => `<h2>${person.name}</h2>`);
-const result = document.querySelector('#result');
+console.log(view.join(" "));
 
-result.innerHTML = names.join('');
+const result = document.querySelector("#result");
+result.innerHTML = view.join("");

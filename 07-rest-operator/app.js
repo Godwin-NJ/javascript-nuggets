@@ -5,16 +5,16 @@
 // rest when declare function, spread when invoke the function
 
 // arrays
-const fruits = ['apple', 'orange', 'lemon', 'banana', 'pear'];
+const fruits = ["apple", "orange", "lemon", "banana", "pear"];
 const [first, second, ...restOfTheFruits] = fruits;
 
 console.log(first, restOfTheFruits);
 
-const specificFruit = restOfTheFruits.find((fruit) => fruit === 'lemon');
+const specificFruit = restOfTheFruits.find((fruit) => fruit === "lemon");
 console.log(specificFruit);
 
 // objects
-const person = { name: 'john', lastName: 'smith', job: 'developer' };
+const person = { name: "john", lastName: "smith", job: "developer" };
 const { job, ...rest } = person;
 console.log(job, rest);
 

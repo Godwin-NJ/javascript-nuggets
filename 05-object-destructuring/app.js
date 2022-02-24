@@ -1,11 +1,11 @@
 // faster/easier way to access/unpack values from arrays
 
 const bob = {
-  first: 'bob',
-  last: 'sanders',
-  city: 'chicago',
+  first: "bob",
+  last: "sanders",
+  city: "chicago",
   siblings: {
-    sister: 'jane',
+    sister: "jane",
   },
 };
 const {
@@ -15,13 +15,14 @@ const {
   zip,
   siblings: { sister: favoriteSibling },
 } = bob;
+
 console.log(firstName, last, city, zip, favoriteSibling);
 
-// const firstName = bob.first;
-// const lastName = bob.last;
-// const sister = bob.siblings.sister;
+const firName = bob.first;
+const laName = bob.last;
+const sis = bob.siblings.sister;
 
-// console.log(firstName,lastName,sister);
+console.log(firName, laName, sis);
 
 function printPerson(person) {
   console.log(person.first);
